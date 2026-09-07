@@ -33,12 +33,15 @@ try {
   process.stderr.write('token-router: could not load config.json, using defaults\n');
 }
 
-const modePath = resolve(__dirname, '../skills/bulk-read/references/bulk-reader-mode.md');
+const pluginRoot = process.env.CLAUDE_PLUGIN_ROOT
+  ? resolve(process.env.CLAUDE_PLUGIN_ROOT, 'skills/bulk-read/references/bulk-reader-mode.md')
+  : resolve(__dirname, '../skills/bulk-read/references/bulk-reader-mode.md');
+const modePath = pluginRoot;
 let modePrompt = '';
 try {
   modePrompt = readFileSync(modePath, 'utf-8');
 } catch {
-  // Inline fallback if file is missing
+  process.stderr.write(`token-router: bulk-reader-mode.md not found at ${modePath}, using inline prompt\n`);
   modePrompt = [
     'You are a file summarisation worker.',
     'Return ONLY structured bullets. Every bullet leads with a symbol name or line number range.',

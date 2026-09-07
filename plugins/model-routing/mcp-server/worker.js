@@ -32,7 +32,7 @@ export async function invokeWorker(config, systemPrompt, userMessage) {
   });
 
   const command = new InvokeModelCommand({
-    modelId: config.workerModel || 'anthropic.claude-3-5-haiku-20241022-v1:0',
+    modelId: config.workerModel || 'anthropic.claude-haiku-4-5-20251001-v1:0',
     body,
     contentType: 'application/json',
     accept: 'application/json',

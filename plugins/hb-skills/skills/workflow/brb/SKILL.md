@@ -21,6 +21,7 @@ If task = unclear: ask;
 - Be ambitious — build, test, fix, polish, extend
 - Note blockers, skip them, keep working on what you can
 - Check the clock on work stage change
+- On each work stage change, if `.scratch/decisions.md` exists, recheck its `Assumes` column the same way `/go` does.
 - When primary work runs dry: review, add tests/docs, anticipate next steps, clean up
 
 ## Don't
@@ -36,6 +37,9 @@ Work Summary: {Time start} - {Time End}
 
 | Item | Time | Done | Decisions | Blocked |
 |------|------|------|-----------|---------|
+
+⚠ Assumptions now in doubt
+<any ledger rows whose Assumes clause is now broken or suspect — omit if none>
 
 Responses are short, tight and succinct.
 

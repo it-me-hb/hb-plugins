@@ -31,7 +31,7 @@ Quick read on four axes — directional, not numeric:
 Name the winner. One sentence: which axis tipped it.
 
 ### 5. Log
-Append to the decision log (the human's review surface when they return).
+Append a row to `.scratch/decisions.md` (see Decision ledger below).
 
 ## Speed calibration
 
@@ -46,14 +46,18 @@ Append to the decision log (the human's review surface when they return).
 
 **Deferral is not a call.** "We'll decide later" is valid only when nothing is blocked by the decision. If work is waiting, pick now with what you know. A wrong call you can reverse costs less than an unmade call that stalls everything behind it.
 
-## Decision log format
+## Decision ledger
 
-```
-| # | Decision | Picked | Why | Rev? |
-|---|----------|--------|-----|------|
-| 1 | State management | Zustand | Lightest, covers needs, easy to swap | min |
-| 2 | Auth strategy | Session-based | Simpler for prototype, JWT overhead not justified | hrs |
-| 3 | Event schema | Flat table | Query patterns are simple; normalize if they get complex | days |
-```
+Every call is appended to `.scratch/decisions.md` (create it if absent). This file — not the chat — is the human's review surface and the thing that survives a handoff or a new session.
 
-Rev? = undo cost shorthand: min / hrs / days / never.
+| # | Decision | Picked | Assumes | Depends on | Rev? |
+|---|----------|--------|---------|------------|------|
+| 1 | State management | Zustand | Single SPA, no SSR | — | min |
+| 2 | Auth strategy | Session-based | Prototype only; no mobile client | — | hrs |
+| 3 | Event schema | Flat table | <10k events/day; query patterns stay simple | 2 | days |
+
+- **Assumes** — the fact that has to stay true for this call to remain correct. Not the reason you picked it; the condition under which it stays right. One clause. If you can't name one, the call is either trivial (don't log it) or you haven't understood it yet.
+- **Depends on** — row numbers of earlier calls this one was built on. `—` if none.
+- **Rev?** — undo cost shorthand: min / hrs / days / never.
+
+For trivially reversible calls (file structure, naming, local config) don't log at all — the framework's speed calibration still applies.

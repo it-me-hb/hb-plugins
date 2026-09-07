@@ -20,8 +20,10 @@ Interview the user about a plan or design to find gaps before building starts.
 ```markdown
 ## Decisions
 
-| # | Question | Decision | Notes |
-|---|----------|----------|-------|
+| # | Question | Decision | Assumes | Notes |
+|---|----------|----------|---------|-------|
+
+If this feeds into /go, seed `.scratch/decisions.md` from this table.
 
 ## Open items
 <anything unresolved — blocked on external info, needs prototyping to answer, or user deferred>

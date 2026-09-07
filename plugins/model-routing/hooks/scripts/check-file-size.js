@@ -3,11 +3,12 @@
 /**
  * PreToolUse hook: check-file-size
  *
- * Fires on Read and Bash tool calls. Blocks reads of files over the
+ * Fires on Read and Bash tool calls. Blocks full reads of files over the
  * configured line threshold and directs the model to use bulk_read instead.
  *
  * Targeted reads (offset or limit set) pass through unconditionally —
- * the model already knows which section it needs.
+ * the model already knows which section it needs. head and tail are treated
+ * as targeted reads and are never blocked.
  */
 
 const fs = require('fs');
@@ -54,7 +55,7 @@ function isReadableFile(filePath) {
  * Handles simple quoting but not all edge cases.
  */
 function extractBashReadTarget(command) {
-  const pattern = /\b(cat|head|tail|less|more)\s+(?:(?:-\S+)\s+)*["']?([^\s"'|;>&$]+)/;
+  const pattern = /\b(cat|less|more)\s+(?:(?:-\S+)\s+)*["']?([^\s"'|;>&$]+)/;
   const match = command.match(pattern);
   return match ? match[2] : null;
 }

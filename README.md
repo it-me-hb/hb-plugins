@@ -1,10 +1,10 @@
-# Claude Marketplace Template
+# hb-plugins
 
-A starter Claude Code marketplace, modelled on [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official) with the dual-deployment ([Cowork plugin](https://claude.com/product/cowork) + [Managed Agent](https://docs.claude.com/en/api/managed-agents)) machinery from [`anthropics/claude-for-financial-services`](https://github.com/anthropics/claude-for-financial-services). Fork it to bootstrap your own team or organisation marketplace.
+Harley Barnes's personal Claude Code plugins: workflow skills, model routing, and a dual-deployment reference agent. Built on the dual-deployment pattern from [`anthropics/claude-for-financial-services`](https://github.com/anthropics/claude-for-financial-services).
 
 ## Two ways from one source
 
-Every agent in this template ships **two ways from one source**: install it as a Claude Code or Cowork plugin, or deploy it through `POST /v1/agents` behind your own workflow engine. Same system prompt, same skills — you choose where it runs.
+Every agent in this repo ships **two ways from one source**: install it as a Claude Code or Cowork plugin, or deploy it through `POST /v1/agents` behind your own workflow engine. Same system prompt, same skills — you choose where it runs.
 
 ```
 plugins/<slug>/agents/<slug>.md       ← single source of truth (system prompt)
@@ -46,15 +46,15 @@ plugins/<slug>/skills/                ← single source of truth (skills)
 Add the marketplace, then install a plugin:
 
 ```
-/plugin marketplace add https://github.com/HBarnes_quantium/claude-marketplace-template
-/plugin install my-first-plugin@claude-marketplace-template
+/plugin marketplace add https://github.com/it-me-hb/hb-plugins
+/plugin install hb-skills@hb-plugins
 ```
 
 Update later with:
 
 ```
-/plugin marketplace update claude-marketplace-template
-/plugin update my-first-plugin@claude-marketplace-template
+/plugin marketplace update hb-plugins
+/plugin update hb-skills@hb-plugins
 ```
 
 Or browse interactively with `/plugin > Discover`.

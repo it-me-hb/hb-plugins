@@ -1,7 +1,7 @@
 {
   "name": "model-routing",
-  "version": "1.0.0",
-  "description": "For model routing options",
+  "version": "1.1.0",
+  "description": "Blocks full reads of large files and routes them through a cheap Bedrock worker model via the bulk_read tool. Configurable line threshold.",
   "author": {
     "name": "Harley Barnes"
   },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "hb-plugin-marketplace",
-  "description": "Quantium template marketplace for Claude Code plugins — fork to bootstrap your own internal or team marketplace.",
+  "name": "hb-plugins",
+  "description": "Harley Barnes's personal Claude Code plugins: workflow skills, model routing, and a dual-deployment reference agent.",
   "owner": {
     "name": "Harley Barnes"
   },
@@ -17,7 +17,7 @@
     },
     {
       "name": "model-routing",
-      "description": "For model routing options",
+      "description": "Blocks full reads of large files and routes them through a cheap Bedrock worker model via the bulk_read tool. Configurable line threshold.",
       "author": {
         "name": "Harley Barnes"
       },

@@ -1,3 +1,8 @@
+---
+name: amplify-build
+description: "Scaffold, configure, and deploy an AWS Amplify Gen 2 app. Triggers: 'Amplify', 'Gen 2', 'AWS Amplify app', 'scaffold an Amplify backend', 'deploy to Amplify sandbox', 'amplify sandbox', 'set up Amplify', 'create an Amplify project'."
+---
+
 # Amplify Build Skill
 
 Scaffold, configure, and deploy an AWS Amplify Gen 2 app.
@@ -13,14 +18,14 @@ If args are missing, ask ONE question block (max 3 questions):
 ---
 
 ## Phase 1 — Scaffold
-Read `.amplify_build/src/scaffold.md`.
+Read `src/scaffold.md`.
 Run commands. Verify directory structure before continuing.
 
 ## Phase 2 — Backend
 Load ONLY the files matching selected features:
-- `auth` → `.amplify_build/src/auth.md`
-- `data` or `custom schema` → `.amplify_build/src/data.md`
-- `bedrock` → `.amplify_build/src/bedrock.md`
+- `auth` → `src/auth.md`
+- `data` or `custom schema` → `src/data.md`
+- `bedrock` → `src/bedrock.md`
 
 Wire everything in `amplify/backend.ts`.
 
@@ -31,7 +36,7 @@ Using patterns from already-loaded feature files, wire `src/App.tsx`:
 - Build form + query call + result display
 
 ## Phase 4 — Deploy
-Read `.amplify_build/src/deploy.md`. Run checklist. Deploy.
+Read `src/deploy.md`. Run checklist. Deploy.
 
 ---
 

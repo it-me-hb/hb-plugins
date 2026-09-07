@@ -9,8 +9,6 @@ Problems arrive already shaped by whoever hit them. People describe a problem fr
 
 The job is to find the shortest sensible way from where things are now to what someone actually needs. Not the best way. The shortest one that works and that you can explain.
 
-Run this before reaching for `wayfinder`, and usually instead of it. Wayfinder charts work too big for one sitting. Do this first and the work is usually no longer too big. If it still is, hand wayfinder the shape this produced.
-
 ## 1. Find the real problem
 
 **Do not accept the frame.** "This takes too long" describes one person's view of one step. Ask what happens before it and what happens after it. Most of what makes a step hard was decided somewhere else.
@@ -48,9 +46,7 @@ There are usually many routes from A to B and most of the differences do not mat
 
 ## 5. Talk, then go
 
-Talk first. One question at a time, with your recommended answer each time. The point of talking is to find the few decisions that change the shape of the thing, and to let simpler options surface. A spec written in one shot skips that and locks in the first idea anybody had.
-
-**Stop when nothing left to discuss would change the plan.** If getting something wrong means a small fix later, do not discuss it — pick one and move on. Talking past that point is its own kind of overbuilding.
+Then run /grill. Stop when nothing left to discuss would change the shape.
 
 Then hand over three things and get out of the way:
 

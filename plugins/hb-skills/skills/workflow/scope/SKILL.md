@@ -107,11 +107,7 @@ Data dictionary — every shape crossing an edge in the diagram. Group in flow o
 
 ## Feeding into the pipeline
 
-**Into /go**: the diagram's main flow is the **spine** — /go builds this first, then widens into subgraphs by value. Open questions and assumptions feed into /call for resolution before execution starts. The data dictionary grounds schema and interface decisions. Dependencies become the punch list's prerequisites.
-
-**Into /to-tickets**: each subgraph or major flow segment is a natural ticket boundary. Blocking edges follow the diagram's dependency flow.
-
-**Into /wayfinder**: if scope reveals the work is too big for one session, the diagram becomes the starting map. Subgraphs become candidate decision tickets.
+**Into /go**: the diagram's main flow is the **spine** — /go builds this first, then widens into subgraphs by value. Open questions and assumptions feed into /call for resolution before execution starts. The data dictionary grounds schema and interface decisions. Dependencies become the punch list's prerequisites. Each bullet under **Assumptions I've made** in the decisions doc becomes a row in `.scratch/decisions.md` when /go starts, with the assumption itself in the `Assumes` column, so it can be rechecked at checkpoints.
 
 ## Ambiguity
 Prefer over-decomposing. State assumptions explicitly. Show the detailed version, note the simpler alternative.

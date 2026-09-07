@@ -56,7 +56,7 @@ Call the Skill tool with "call" to load the decision framework. Apply it at ever
 Execute in sequence. At each step:
 
 - **Decision needed?** Apply the call framework — frame, score, pick, log, move.
-- **Research needed?** If fast (< 2 min), do it inline. If slow, make a best-guess call and log it as "assumed — verify later."
+- **Research needed?** Research inline if under ~2 min; otherwise make a call, log it as "assumed — verify later."
 - **Harder than expected?** Re-scope. Cut from later steps to protect the spine.
 - **Easier than expected?** Pull the next high-value item forward.
 
@@ -67,6 +67,7 @@ At natural breakpoints — a step complete, a significant call made, a pivot —
 - What's next
 - Calls since last checkpoint
 - Runway remaining vs work remaining
+- **Recheck the ledger.** Re-read the `Assumes` column in `.scratch/decisions.md`. If anything you've learned since makes an assumption false, mark that row `⚠ broken`, then walk `Depends on` forward and mark every row that transitively depends on it `⚠ suspect`. Fix what you can now; the rest goes in the return brief.
 
 ### 4. Return brief
 
@@ -77,10 +78,11 @@ When the work is done or the runway expires:
 <one paragraph: what exists now, how to see/run it>
 
 ## Calls made
-<the decision log table>
+<the decision ledger table, copied from .scratch/decisions.md. Any row marked ⚠ goes at the top.>
 
 ## What's left
 <descoped items, deferred decisions, "verify later" assumptions>
+<any ⚠ suspect rows not yet re-verified>
 
 ## Look at these
 <2-3 things worth the user's attention: a judgment call that could go either way, a shortcut worth revisiting, something that works but feels off>
@@ -93,7 +95,5 @@ Optimised for a human returning: readable in 2 minutes, full picture of where th
 Go is a wrapper around whatever the work requires:
 
 - `/scope` upstream if the work needs decomposition before building — but don't scope what you can just build
-- `/call` at every decision point (loaded once at session start)
-- `/prototype` when the fastest path to a working artifact is throwaway code
-- `/research` for facts, but prefer fast inline research over background agents — speed matters in go mode
+- `/call` at every decision point (loaded once at session start). The ledger it writes is the spine of the return brief and the handoff.
 - `/handoff` if the runway expires and significant work remains
