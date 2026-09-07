@@ -7,22 +7,22 @@
   },
   "plugins": [
     {
-      "name": "my-first-plugin",
-      "description": "A simple greeting plugin to learn the basics of Claude Code plugin authoring",
-      "author": {
-        "name": "Harley Barnes"
-      },
-      "category": "development",
-      "source": "./plugins/my-first-plugin"
-    },
-    {
-      "name": "slide-builder",
-      "description": "Slide builder skills for assembling decks programmatically",
+      "name": "hb-skills",
+      "description": "Personal workflow and tooling skills",
       "author": {
         "name": "Harley Barnes"
       },
       "category": "productivity",
-      "source": "./plugins/slide-builder"
+      "source": "./plugins/hb-skills"
+    },
+    {
+      "name": "model-routing",
+      "description": "For model routing options",
+      "author": {
+        "name": "Harley Barnes"
+      },
+      "category": "development",
+      "source": "./plugins/model-routing"
     },
     {
       "name": "example-agent",
