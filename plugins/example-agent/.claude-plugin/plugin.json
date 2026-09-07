@@ -1,0 +1,8 @@
+{
+  "name": "example-agent",
+  "description": "Reference plugin showing the dual-deployment pattern: same system prompt + skills run interactively as a Claude Code/Cowork plugin and headlessly as a managed agent.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Harley Barnes"
+  }
+}

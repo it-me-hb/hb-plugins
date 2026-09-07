@@ -1,0 +1,9 @@
+{
+  "name": "hb-skills",
+  "version": "1.0.0",
+  "description": "Personal workflow and tooling skills",
+  "author": {
+    "name": "Harley Barnes"
+  },
+  "keywords": ["workflow", "productivity", "decision-making", "ambitious-execution"]
+}

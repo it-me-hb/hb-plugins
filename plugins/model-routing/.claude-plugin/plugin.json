@@ -1,0 +1,11 @@
+{
+  "name": "model-routing",
+  "version": "1.0.0",
+  "description": "For model routing options",
+  "author": {
+    "name": "Harley Barnes"
+  },
+  "keywords": ["token-routing"],
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

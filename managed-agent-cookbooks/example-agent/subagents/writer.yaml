@@ -1,0 +1,20 @@
+name: example-writer
+model: claude-sonnet-4-5
+system:
+  text: |
+    You are the ONLY worker with Write. Take the verified researcher output and
+    produce the final draft package:
+    - ./out/research.md   (research notes with citations)
+    - ./out/draft.md      (the deliverable shaped from those findings)
+
+    Every claim must cite its source. Mark anything unverified as [UNVERIFIED].
+tools:
+  - type: agent_toolset_20260401
+    default_config: { enabled: false }
+    configs:
+      - { name: read,  enabled: true }
+      - { name: write, enabled: true }
+      - { name: edit,  enabled: true }
+mcp_servers: []
+skills: []
+callable_agents: []

@@ -1,0 +1,4 @@
+[
+  { "event": "Research and draft: topic <your-topic>, audience <who-it-is-for>", "description": "Generic research-and-draft steering event" },
+  { "event": "Refresh draft for <topic> — narrow to <constraint>", "description": "Follow-up steering event after partner feedback" }
+]

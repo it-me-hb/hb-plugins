@@ -1,0 +1,37 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-marketplace-template",
+  "description": "Quantium template marketplace for Claude Code plugins — fork to bootstrap your own internal or team marketplace.",
+  "owner": {
+    "name": "Harley Barnes"
+  },
+  "plugins": [
+    {
+      "name": "my-first-plugin",
+      "description": "A simple greeting plugin to learn the basics of Claude Code plugin authoring",
+      "author": {
+        "name": "Harley Barnes"
+      },
+      "category": "development",
+      "source": "./plugins/my-first-plugin"
+    },
+    {
+      "name": "slide-builder",
+      "description": "Slide builder skills for assembling decks programmatically",
+      "author": {
+        "name": "Harley Barnes"
+      },
+      "category": "productivity",
+      "source": "./plugins/slide-builder"
+    },
+    {
+      "name": "example-agent",
+      "description": "Reference plugin showing the dual-deployment pattern: same system prompt + skills run interactively as a Claude Code/Cowork plugin and headlessly as a managed agent",
+      "author": {
+        "name": "Harley Barnes"
+      },
+      "category": "development",
+      "source": "./plugins/example-agent"
+    }
+  ]
+}
