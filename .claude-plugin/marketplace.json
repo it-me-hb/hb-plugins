@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "claude-marketplace-template",
+  "name": "hb-plugin-marketplace",
   "description": "Quantium template marketplace for Claude Code plugins — fork to bootstrap your own internal or team marketplace.",
   "owner": {
     "name": "Harley Barnes"
